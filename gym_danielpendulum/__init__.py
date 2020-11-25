@@ -4,11 +4,9 @@ Created on Tue Nov 24 22:40:03 2020
 
 @author: Daniel McClement
 """
+from gym.envs.registration import register
 
-
-from setuptools import setup
-
-setup(name='danielpendulum',
-      version='0.0.1',
-      install_requires=['gym']  # And any other dependencies foo needs
+register(
+    id='danielpendulum',
+    entry_point='gym_foo.envs:DanielPendulumEnv',
 )
